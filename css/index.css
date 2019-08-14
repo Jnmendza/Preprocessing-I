@@ -196,6 +196,32 @@ nav a {
   width: 49%;
 }
 .mid-content li {
-  border: 1px solid gray;
-  padding: 10px;
+  border: 1px solid lightgray;
+  padding: 10px 20px;
+}
+.bottom-content h3 {
+  font-size: 30px;
+}
+.bottom-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.bottom-content table tr,
+.bottom-content table th {
+  border: 1px solid lightgray;
+  text-align: left;
+  padding: 8px;
+}
+.bottom-content table tr:nth-child(even) {
+  background-color: lightgray;
+}
+footer {
+  background-color: gray;
+  height: 100px;
+  margin-top: 20px;
+}
+footer p {
+  text-align: center;
+  color: white;
+  padding-top: 20px;
 }
