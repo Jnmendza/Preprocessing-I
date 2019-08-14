@@ -105,7 +105,7 @@ section {
   display: block;
 }
 body {
-  line-height: 1;
+  line-height: 1.5;
 }
 ol,
 ul {
@@ -133,4 +133,69 @@ table {
 html,
 body {
   height: 100%;
+  width: 95%;
+  margin: 0 auto;
+  font-family: 'Lexend Deca', sans-serif;
+}
+/* Mixins */
+.font-class {
+  color: black;
+  text-decoration: none;
+}
+/****************** CSS STYLES **********************/
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+nav a {
+  padding: 20px;
+  color: black;
+  text-decoration: none;
+}
+.header-container {
+  background-color: lightgray;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-container .img-container,
+.header-container .intro-container {
+  width: 90%;
+  margin: 0 auto;
+}
+.header-container h1 {
+  font-size: 60px;
+}
+.header-container img {
+  width: 250px;
+  height: 300px;
+}
+.header-container button {
+  width: 15%;
+  height: 40px;
+  background-color: gray;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.mid-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.mid-content h3 {
+  font-size: 30px;
+}
+.mid-content .text {
+  width: 50%;
+}
+.mid-content .skills {
+  width: 49%;
+}
+.mid-content li {
+  border: 1px solid gray;
+  padding: 10px;
 }
