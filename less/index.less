@@ -57,13 +57,20 @@ html, body {
 	height: 100%;
 	width:95%;
 	margin: 0 auto;
-	font-family:'Lexend Deca', sans-serif;
+	font-family: @paragraphFont;
 }
-
-/* Mixins */
+/******************** VARIABLE *********************/
+@backgroundColor: lightgray;
+@paragraphFont: 'Montserrat', sans-serif;
+/******************* MIXINS *************************/
 .font-class {
 	color: black;
 	text-decoration: none;
+}
+
+.title-font {
+	font-size: 30px;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 /****************** CSS STYLES **********************/
 nav {
@@ -77,7 +84,7 @@ nav {
 } // closes nav
 
 .header-container{
-	background-color: lightgray;
+	background-color: @backgroundColor;
 	height: 600px;
 	display: flex;
 	flex-direction: column;
@@ -110,7 +117,7 @@ nav {
 	justify-content: space-between;
 	margin:20px 0;
 		h3 {
-			font-size: 30px;
+			.title-font();
 		}//closes h3 tag
 		.text{
 			width:50%;
@@ -119,37 +126,47 @@ nav {
 			width: 49%;
 		}// closes .skills
 		li{
-			border: 1px solid lightgray;
+			border: 1px solid @backgroundColor;
 			padding: 10px 20px;
 		}//closes li
 } //closes .mid-content
 
 .bottom-content {
 	h3{
-		font-size:30px;
+		.title-font();
 	}
 	table{
 		width:100%;
 		border-collapse: collapse;
 		tr, th {
-			border: 1px solid lightgray;
+			border: 1px solid @backgroundColor;
 			text-align: left;
 			padding: 8px;
 		  }//closes tr and th from tables
 		  
 		  tr:nth-child(even) {
-			background-color: lightgray;
+			background-color:@backgroundColor;
 		  }
 	}//closes table
 }//closes .bottom-content and .work-table
 
-footer{
-	background-color: gray;
-	height: 100px;
+footer {
+	display: flex;
+	background-color: darkgray;
+	color:white;
+	height: 40%;
 	margin-top: 20px;
-		p{
-			text-align: center;
-			color:white;
-			padding-top:20px;
+		.contact{
+			width:50%;
 		}
+		.copyright{
+			display: flex;
+			justify-content: center;
+			width:49%;
+		}
+		
+	
+	
+
 }
+
