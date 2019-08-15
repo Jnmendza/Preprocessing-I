@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.5;
 }
 ol, ul {
 	list-style: none;
@@ -54,6 +54,141 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	width:95%;
+	margin: 0 auto;
+	font-family: @paragraphFont;
+}
+/******************** VARIABLE *********************/
+@backgroundColor: lightgray;
+@paragraphFont: 'Montserrat', sans-serif;
+/******************* MIXINS *************************/
+.font-class {
+	color: black;
+	text-decoration: none;
 }
 
+.title-font {
+	font-size: 30px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.mobile-header-title{
+	font-size: 15px;
+}
+/****************** CSS STYLES **********************/
+nav {
+	display: flex;
+	justify-content: flex-end;
+	margin: 10px 0;
+		a {
+			padding:20px;
+			.font-class();
+		} //closes a tag
+} // closes nav
+
+.header-container{
+	background-color: @backgroundColor;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	@media(max-width: 500px){
+		background-color:@backgroundColor;
+ 		height: 900px;
+	}
+
+	
+		.img-container, .intro-container{
+			width:90%;
+			margin: 0 auto;
+		}// closes .img-container and .intro-container
+		h1 {
+			font-size: 60px;
+		} //closes h1 tag
+		img {
+			width: 250px;
+			height: 300px;
+		} // closes img 
+		button {
+			width: 15%;
+			height: 40px;
+			background-color: gray;
+			color: white;
+			font-size: 20px;
+			border-radius: 5px;
+			margin-top: 20px;
+			@media(max-width: 500px){
+				width: 50%;
+			}// closes media mobile viewport
+		}//closes button
+
+} //closes .header-container
+
+.mid-content{
+	display: flex;
+	justify-content: space-between;
+	margin:20px 0;
+		h3 {
+			.title-font();
+		}//closes h3 tag
+		.text{
+			width:50%;
+		}//closes .text
+		.skills{
+			width: 49%;
+		}// closes .skills
+		li{
+			border: 1px solid @backgroundColor;
+			padding: 10px 20px;
+		}//closes li
+} //closes .mid-content
+
+.bottom-content {
+	h3{
+		.title-font();
+	}
+	table{
+	width:100%;
+	border-collapse: collapse;
+	tr, th {
+		border: 1px solid @backgroundColor;
+		text-align: left;
+		padding: 8px;
+		}//closes tr and th from tables
+		
+		tr:nth-child(even) {
+		background-color:@backgroundColor;
+		}
+	}//closes table
+}//closes .bottom-content and .work-table
+
+footer {
+	display: flex;
+	background-color: darkgray;
+	color:white;
+	height: 40%;
+	margin-top: 20px;
+	.contact{
+		width:50%;
+		margin:30px;
+	}
+	.contact h3{
+		.title-font();
+	}
+	.vl{
+		border-left: 2px solid white;
+		height: 90%;
+		margin:auto 0;
+		@media(max-width: 500px){
+			margin-right: 25px;
+		}
+	}
+	.copyright{
+		display: flex;
+		justify-content: center;
+		width:49%;
+		height: 10%;
+		margin: auto 0;
+	}
+}
