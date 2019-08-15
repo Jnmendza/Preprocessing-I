@@ -147,6 +147,9 @@ body {
   font-size: 30px;
   font-family: 'Roboto Condensed', sans-serif;
 }
+.mobile-header-title {
+  font-size: 15px;
+}
 /****************** CSS STYLES **********************/
 nav {
   display: flex;
@@ -164,6 +167,12 @@ nav a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (max-width: 500px) {
+  .header-container {
+    background-color: lightgray;
+    height: 900px;
+  }
 }
 .header-container .img-container,
 .header-container .intro-container {
@@ -185,6 +194,11 @@ nav a {
   font-size: 20px;
   border-radius: 5px;
   margin-top: 20px;
+}
+@media (max-width: 500px) {
+  .header-container button {
+    width: 50%;
+  }
 }
 .mid-content {
   display: flex;
@@ -231,9 +245,26 @@ footer {
 }
 footer .contact {
   width: 50%;
+  margin: 30px;
+}
+footer .contact h3 {
+  font-size: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+footer .vl {
+  border-left: 2px solid white;
+  height: 90%;
+  margin: auto 0;
+}
+@media (max-width: 500px) {
+  footer .vl {
+    margin-right: 25px;
+  }
 }
 footer .copyright {
   display: flex;
   justify-content: center;
   width: 49%;
+  height: 10%;
+  margin: auto 0;
 }

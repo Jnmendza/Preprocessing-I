@@ -72,6 +72,9 @@ html, body {
 	font-size: 30px;
 	font-family: 'Roboto Condensed', sans-serif;
 }
+.mobile-header-title{
+	font-size: 15px;
+}
 /****************** CSS STYLES **********************/
 nav {
 	display: flex;
@@ -89,6 +92,12 @@ nav {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
+	@media(max-width: 500px){
+		background-color:@backgroundColor;
+ 		height: 900px;
+	}
+
 	
 		.img-container, .intro-container{
 			width:90%;
@@ -109,7 +118,11 @@ nav {
 			font-size: 20px;
 			border-radius: 5px;
 			margin-top: 20px;
-		}
+			@media(max-width: 500px){
+				width: 50%;
+			}// closes media mobile viewport
+		}//closes button
+
 } //closes .header-container
 
 .mid-content{
@@ -136,17 +149,17 @@ nav {
 		.title-font();
 	}
 	table{
-		width:100%;
-		border-collapse: collapse;
-		tr, th {
-			border: 1px solid @backgroundColor;
-			text-align: left;
-			padding: 8px;
-		  }//closes tr and th from tables
-		  
-		  tr:nth-child(even) {
-			background-color:@backgroundColor;
-		  }
+	width:100%;
+	border-collapse: collapse;
+	tr, th {
+		border: 1px solid @backgroundColor;
+		text-align: left;
+		padding: 8px;
+		}//closes tr and th from tables
+		
+		tr:nth-child(even) {
+		background-color:@backgroundColor;
+		}
 	}//closes table
 }//closes .bottom-content and .work-table
 
@@ -156,17 +169,26 @@ footer {
 	color:white;
 	height: 40%;
 	margin-top: 20px;
-		.contact{
-			width:50%;
+	.contact{
+		width:50%;
+		margin:30px;
+	}
+	.contact h3{
+		.title-font();
+	}
+	.vl{
+		border-left: 2px solid white;
+		height: 90%;
+		margin:auto 0;
+		@media(max-width: 500px){
+			margin-right: 25px;
 		}
-		.copyright{
-			display: flex;
-			justify-content: center;
-			width:49%;
-		}
-		
-	
-	
-
+	}
+	.copyright{
+		display: flex;
+		justify-content: center;
+		width:49%;
+		height: 10%;
+		margin: auto 0;
+	}
 }
-
